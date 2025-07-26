@@ -6,6 +6,8 @@ jobs:
     karim:
         runs-on: ubuntu-latest
         steps:
+            - name: checkout 
+              uses: actions/checkout@v4
             - name: Welcome 
               run: |
                 echo "Hello world"
@@ -13,3 +15,8 @@ jobs:
                 sudo apt install cowsay -y
                 cowsay -f dragon "Run for cover, I am a DRAGON....RAWR" >> dragon.txt
                 cat dragon.txt
+
+            - name: show my README.md
+              run: |
+                ls -ltrah
+                cat README.md
